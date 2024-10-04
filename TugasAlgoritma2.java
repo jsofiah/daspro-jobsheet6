@@ -11,23 +11,35 @@ public class TugasAlgoritma2 {
         jumlahBeli = input21.nextInt();
 
         if(jenisBuku.equalsIgnoreCase("Kamus")){
-            diskon = 10;
-            if(jumlahBeli > 2)
-                diskon += 2;
-            else
-                diskon +=0;
+            if(jumlahBeli < 1)
+                System.out.println("Input tidak valid");
+            else {
+                diskon = 10;
+                if(jumlahBeli < 1)
+                    System.out.println("Input tidak valid");
+                else if(jumlahBeli > 2)
+                    diskon += 2;
+                else
+                    diskon +=0;
+            }
         }
         else if(jenisBuku.equalsIgnoreCase("Novel")){
-            diskon = 7;
-            if(jumlahBeli > 3)
-                diskon += 2;
-            else if(jumlahBeli <= 3)
-                diskon += 1;
-            else 
-                diskon +=0;
+            if(jumlahBeli < 1)
+                System.out.println("Input tidak valid");
+            else{
+                diskon = 7;
+                if(jumlahBeli > 3)
+                    diskon += 2;
+                else if(jumlahBeli <= 3)
+                    diskon += 1;
+                else 
+                    diskon +=0;
+            }
         }
         else{
-            if(jumlahBeli >3)
+            if(jumlahBeli < 1)
+                System.out.println("Input tidak valid");
+            else if(jumlahBeli >3)
                 diskon = 5;
             else 
                 diskon = 0;
